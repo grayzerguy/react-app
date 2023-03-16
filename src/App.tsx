@@ -1,19 +1,25 @@
-import Message from "./Message";
+import Alert from "./components/Alert";
+import ListGroup from "./components/ListGroup";
 
-
-function App() {
-  const name = "";
-  if (name)
+function App() : JSX.Element {
+  let items = ["New York", "Los Angeles", "Chicago", "Houston"];
+  const handelSelectItem = (item: string) => {
+    console.log(item);
+  }
+    
   return (
-    <div className="App">
-      <h1>hello {name}</h1>
+    <div>
+      <>
+        {/* <ListGroup items={items} heading="Cities" onSelectItem={handelSelectItem} /> */}
+        <Alert>
+          <div>Hello
+            <p></p>
+          <span>Word</span>
+          </div>
+        </Alert>
+      </>
     </div>
-  )
-    return (
-      <div className="App">
-        <h1>hello <Message/></h1>
-      </div>
   );
 }
 
-export default App
+export default App;
